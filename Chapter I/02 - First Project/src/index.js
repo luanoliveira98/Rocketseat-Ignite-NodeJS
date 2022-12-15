@@ -31,4 +31,12 @@ app.post('/account', (req, res) => {
   res.status(201).send()
 })
 
+app.get('/statement/:cpf', (req, res) => {
+  const { cpf } = req.params
+
+  const customer = customers.find(customer => customer.cpf === cpf)
+
+  return res.json(customer.statement)
+})
+
 app.listen(3333)
