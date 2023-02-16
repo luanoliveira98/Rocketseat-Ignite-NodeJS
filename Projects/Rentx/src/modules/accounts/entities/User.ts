@@ -1,4 +1,5 @@
 import { v4 as uuidV4 } from "uuid";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
 
 @Entity("users")
